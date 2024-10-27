@@ -1,0 +1,260 @@
+html, body {
+    margin: 0; /* tadi 5px */
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.judul {
+    color: #091426;
+    margin: 0;
+    padding-left: 0px;
+    font-size: calc(1.575rem + 3.9vw);
+}
+.divider {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #c7cec1;
+}
+.garis {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 5px solid #a8b1a0;
+    margin-top: 60px;
+}
+.saran {
+    color: #091426;
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*Bagian Gambar*/
+.image-container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    overflow: hidden;
+    margin-top: 70px;
+}
+.image-container img {
+    width: 100vw;
+    height: auto;
+}
+#icon {
+    margin-right: 50px;
+    width: 30px;
+    cursor: pointer;
+}
+.dark-theme {
+    background-color: rgb(0, 0, 0);
+    color: rgb(194, 190, 184);
+}
+.dark-theme .teksbawahgambar {
+    color: #817c79;
+}
+.dark-theme .atas {
+    background-color: rgb(0, 0, 0);
+}
+.dark-theme .judul {
+    color: rgb(55, 87, 148);
+}
+.mobile-image {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+/* Gaya untuk gambar di dalam modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Gaya untuk tombol close (X) */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Bagian Navbar*/
+nav {
+    background-color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+}
+nav ul li {
+    margin-right: 30px;
+}
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 1px solid #e7681300;
+}
+nav ul li a:hover {
+    color: #e76813;
+    border-bottom: 1px solid #e76813;
+}
+.menu-icon {
+    font-size: 30px;
+    display: none;
+}
+.isi {
+    color: #212529;
+    margin: 0;
+    padding-left: 0px;
+}
+p {
+    font-family: sans-serif;
+    padding-left: 0px;
+    text-align: justify;
+    font-weight: 400;
+}
+
+button {
+    border: 1px solid;
+    padding: 5px;
+    position: absolute; /* atau gunakan absolute untuk elemen di dalam kontainer relatif */
+    right: 30px;
+    background-color: #c0c0c0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#tombol:checked~.kontener .selengkapnya {
+    display: block;
+}
+input {
+    display: none;
+}
+.selengkapnya {
+    display: none;
+}
+.daftar {
+    font-family: sans-serif;
+    padding-left: 0px;
+    text-align: justify;
+    font-weight: 400;
+    line-height: 1.5;
+}
+h4 {
+    font-family: sans-serif;
+    padding-left: 0px;
+}
+
+.responsive-image {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: auto;
+}
+.teksbawahgambar {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: auto;
+    color: #bbbbbb;
+}
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Aspek rasio 16:9 */
+    margin-bottom: 20px; /* Jarak bawah */
+    clear: both;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop-image {
+        display: none;
+    }
+    .mobile-image {
+        display: block;
+    }
+    nav {
+    flex-wrap: wrap;
+    text-align: center;
+    }
+    nav ul {
+    flex-direction: column;
+    width: 100%;
+    }
+    nav ul.hidden {
+    display: none;
+    }
+    .menu-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 4rem;
+    }
+    .responsive-image {
+        border: 0 none;
+        height: auto;
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+        width: auto;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+        
+    }
+}
